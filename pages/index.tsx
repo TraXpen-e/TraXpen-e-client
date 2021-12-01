@@ -1,12 +1,11 @@
-import { GetServerSideProps } from "next";
-export { NextRouteComponent as default } from "@pankod/refine-nextjs-router";
+import Head from 'next/head'
+import Image from 'next/image'
+import styles from '../styles/Home.module.css'
 
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  return {
-    props: {
-      ...(await serverSideTranslations(context.locale ?? "en", ["common"])),
-    },
-  };
-};
+export default function Home() {
+  return (
+    <div className={styles.container}>
+      <h1>Hello World</h1>
+    </div>
+  )
+}
