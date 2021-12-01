@@ -1,11 +1,13 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import React from 'react'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <h1>Hello World</h1>
+    <div className='flex flex-col items justify-center min-h-screen py-2 bg-gray-100'>
+      <Head>
+        <title>TraXpen$e - Manage your expenses</title>
+      </Head>
+      <h1>Home Page</h1>
     </div>
   )
 }
