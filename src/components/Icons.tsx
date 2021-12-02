@@ -1,6 +1,7 @@
 import React from 'react'
 import tw from 'twin.macro'
 import styled from 'styled-components'
+import { PropType } from '@interfaces'
 
 export const Icons = (props: any) => {
   return (
@@ -16,11 +17,7 @@ export const Icons = (props: any) => {
   )
 }
 
-interface IconProps {
-  center?: boolean
-}
-
-const IconDiv = styled.div(({ center }: IconProps) => [
+const IconDiv = styled.div(({ center }: PropType) => [
   center && tw`justify-center`,
 
   tw`flex  my-2`
