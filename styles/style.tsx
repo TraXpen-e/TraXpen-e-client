@@ -16,7 +16,7 @@ export const Text = styled.p(({ color, marginTopBtm }: PropType) => [
 
 export const MainDiv = styled.div(({ center }: PropType) => [
   center && tw`justify-center`,
-  tw`flex flex-col  min-h-screen py-2 bg-gray-100`
+  tw`flex flex-col  min-h-screen py-2 bg-gray-100 `
 ])
 
 export const LogoText = styled.div`
