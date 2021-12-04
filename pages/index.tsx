@@ -1,11 +1,62 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import tw from 'twin.macro'
+import styled from 'styled-components'
+
+interface ConditionalProps {
+  isRed?: boolean
+}
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <h1>Hello World</h1>
+    <div className='flex flex-col items-center justify-center min-h-screen py-2'>
+      <Head>
+        <title>TraXpen$e - Manage your expenses</title>
+      </Head>
+
+      <main className='flex flex-col items-center justify-center w-full flex-1 px-20 text-center'>
+        <StyledButton>In Style</StyledButton>
+        <br />
+        <TailwindButton>In Tailwind Style</TailwindButton>
+        <br />
+        <ConditionalButton isRed={false}>
+          Conditional Tailwind
+        </ConditionalButton>
+      </main>
     </div>
   )
 }
+
+// still works despite importing from twin.macro
+const StyledButton = styled.button`
+  background: red;
+  color: white;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.25em 1em;
+  border: 2px solid black;
+`
+
+const TailwindButton = tw.button`
+  bg-green-500
+  hover:bg-red-700
+  text-white
+  font-bold
+  py-2
+  px-4
+  border
+  border-black
+  rounded
+`
+
+const ConditionalButton = styled.button(({ isRed }: ConditionalProps) => [
+  isRed ? tw`bg-red-500 hover:bg-red-700` : tw`bg-blue-500 hover:bg-blue-500`,
+  tw`
+    text-white
+    font-bold
+    py-2
+    px-4
+    border
+    border-black
+    rounded
+  `
+])
