@@ -7,6 +7,7 @@ import { FaRegEnvelope, FaUser } from 'react-icons/fa'
 import { MdLockOutline } from 'react-icons/md'
 
 import { Input, Button, Form } from '@components'
+import { usePostRequest } from '@hooks'
 import { IFormValue } from '@interfaces'
 
 export const Signup = () => {
@@ -17,9 +18,11 @@ export const Signup = () => {
     formState: { errors }
   } = useForm<IFormValue>()
 
-  const userRegister = async (data: IFormValue) => {
-    await axios.post('http://localhost:5000/signup', data)
-    router.push('/')
+  const { postRequest, error } = usePostRequest()
+
+  const userRegister = async (postData: IFormValue) => {
+    await postRequest('signup', postData)
+    router.push('/signin')
   }
   return (
     <Form

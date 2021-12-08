@@ -20,7 +20,9 @@
       "@interfaces/*": ["src/interfaces/*"],
       "@interfaces": ["src/interfaces"],
       "@styles/*": ["src/styles/*"],
-      "@styles": ["src/styles"]
+      "@styles": ["src/styles"],
+      "@utils": ["src/utils"],
+      "@hooks": ["src/hooks"]
     },
     "incremental": true
   },
