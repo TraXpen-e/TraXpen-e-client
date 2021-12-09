@@ -5,7 +5,13 @@ export interface PropType {
 }
 
 export interface IFormValue {
-  username: string
-  email: string
-  password: string
+  username?: string
+  email?: string
+  password?: string
+}
+
+export interface IPostData {
+  url: string
+  data?: any
+  options?: object
 }
