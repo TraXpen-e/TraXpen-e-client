@@ -44,7 +44,7 @@ export const LogoLink = styled(NavLink)`
     ${tw`w-10 mr-3`}
   }
   span {
-    ${tw`text-green-500`}
+    ${tw`text-primary-500`}
   }
 `;
 

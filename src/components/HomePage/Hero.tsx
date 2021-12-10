@@ -30,8 +30,12 @@ const DesignIllustration = styled(Image)``;
 
 const IllustrationContainer = tw.div`flex justify-center lg:justify-end items-center`;
 
-const DecoratorBlob1 = styled(Image)`
+const DecoratorBlob1 = styled(Image)``;
+const DecoratorBlob1Container = styled.div`
   ${tw`pointer-events-none opacity-5 absolute left-0 bottom-0 h-64 w-64 transform -translate-x-2/3`} z-index: 10;
+  svg {
+    fill: "red";
+  }
 `;
 
 const Hero = ({ roundedHeaderButton }: IHeaderProps) => {
@@ -65,11 +69,13 @@ const Hero = ({ roundedHeaderButton }: IHeaderProps) => {
             </IllustrationContainer>
           </RightColumn>
         </TwoColumn>
-        <DecoratorBlob1
-          src="/assets/images/blob-1.svg"
-          width={500}
-          height={500}
-        />
+        <DecoratorBlob1Container>
+          <DecoratorBlob1
+            src="/assets/images/blob-1.svg"
+            width={500}
+            height={500}
+          />
+        </DecoratorBlob1Container>
       </Container>
     </>
   );
