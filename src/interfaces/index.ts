@@ -12,3 +12,10 @@ export interface IHeaderProps {
   className?: string,
   collapseBreakpointClass?: string
 }
+
+export interface IHomeFeatureProps{
+  cards: string[],
+  heading: string,
+  subheading : string,
+  description : string,
+}
