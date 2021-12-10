@@ -1,13 +1,13 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
-import axios from 'axios'
 import { useRouter } from 'next/router'
 
 import { FaRegEnvelope, FaUser } from 'react-icons/fa'
 import { MdLockOutline } from 'react-icons/md'
 
-import { Input, Button, Form } from '@components'
+import { Input, Button, SpinButton, Form } from '@components'
 import { usePostRequest } from '@hooks'
+import { EMAIL_REGEX } from '@constants'
 import { IFormValue } from '@interfaces'
 
 export const Signup = () => {
@@ -18,7 +18,7 @@ export const Signup = () => {
     formState: { errors }
   } = useForm<IFormValue>()
 
-  const { postRequest, error } = usePostRequest()
+  const { postRequest, error, loading } = usePostRequest()
 
   const userRegister = async (postData: IFormValue) => {
     await postRequest('signup', postData)
@@ -43,8 +43,7 @@ export const Signup = () => {
         {...register('email', {
           required: 'Email is required',
           pattern: {
-            value:
-              /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+            value: EMAIL_REGEX,
             message: 'Please enter a valid email'
           }
         })}
@@ -65,7 +64,11 @@ export const Signup = () => {
         error={errors.password?.message}
       />
 
-      <Button green={true} rounded={true} text='Sign Up' type='submit' />
+      {loading ? (
+        <SpinButton text='Loading' />
+      ) : (
+        <Button green={true} rounded={true} text='Sign In' />
+      )}
     </Form>
   )
 }

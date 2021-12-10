@@ -6,10 +6,10 @@ export function usePostRequest() {
   const [error, setError] = useState<any>()
   const [loading, setLoading] = useState<boolean>(false)
 
-  const postRequest = async (url: string, body: any) => {
+  const postRequest = async (url: string, body?: any, options?: any) => {
     setLoading(true)
     try {
-      const response = await Axios.post(url, body)
+      const response = await Axios.post(url, body, options)
       setData(response.data)
       setLoading(false)
     } catch (error) {
@@ -17,7 +17,6 @@ export function usePostRequest() {
       setLoading(false)
     }
   }
-
   return {
     data,
     error,
