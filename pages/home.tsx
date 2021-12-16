@@ -7,18 +7,17 @@ import tw from "twin.macro";
 import Hero from "../src/components/HomePage/Hero";
 import Features from "../src/components/HomePage/Features";
 import QualityWork from "../src/components/HomePage/QualityWork";
-import Values from "../src/components/HomePage/Values";
-import FeatureWithSteps from "../src/components/HomePage/FeatureWithSteps";
-import Pricing from "../src/components/HomePage/Pricing";
-import Testimonial from "../src/components/HomePage/Testimonial";
-import FAQ from "../src/components/HomePage/FAQ";
-import GetStarted from "../src/components/HomePage/GetStarted";
-import Footer from "../src/components/HomePage/Footer";
-import heroScreenshotImageSrc from "../src/Assets/Images/hero-screenshot-1.png";
-import macHeroScreenshotImageSrc from "../src/Assets/Images/hero-screenshot-2.png";
-import prototypeIllustrationImageSrc from "../src/Assets/Images/prototype-illustration.svg";
-import { FiBriefcase } from "react-icons/fi";
-import { FiDollarSign } from "react-icons/fi";
+// import Values from "../src/components/HomePage/Values";
+// import FeatureWithSteps from "../src/components/HomePage/FeatureWithSteps";
+// import Pricing from "../src/components/HomePage/Pricing";
+// import Testimonial from "../src/components/HomePage/Testimonial";
+// import FAQ from "../src/components/HomePage/FAQ";
+// import GetStarted from "../src/components/HomePage/GetStarted";
+// import Footer from "../src/components/HomePage/Footer";
+
+// import prototypeIllustrationImageSrc from "../src/Assets/Images/prototype-illustration.svg";
+// import { FiBriefcase } from "react-icons/fi";
+// import { FiDollarSign } from "react-icons/fi";
 
 const Home = () => {
   const Subheading = tw.span`uppercase tracking-widest font-bold text-primary-500`;
@@ -40,13 +39,12 @@ const Home = () => {
             </>
           }
         />
+        <QualityWork
+          subheading={<Subheading>Quality Work</Subheading>}
+          imageSrc={"/assets/images/hero-screenshot-1.png"}
+          imageBorder={true}
+        />
         {/* 
-      <QualityWork
-        subheading={<Subheading>Quality Work</Subheading>}
-        imageSrc={heroScreenshotImageSrc}
-        imageBorder={true}
-        imageDecoratorBlob={true}
-      />
       <FeatureWithSteps
         subheading={<Subheading>STEPS</Subheading>}
         heading={
@@ -55,7 +53,7 @@ const Home = () => {
           </>
         }
         textOnLeft={false}
-        imageSrc={macHeroScreenshotImageSrc}
+        imageSrc={"/assets/images/hero-screenshot-2.png"}
         imageDecoratorBlob={true}
         decoratorBlobCss={tw`xl:w-40 xl:h-40 opacity-20 -translate-x-1/2 left-1/2`}
       />

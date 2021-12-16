@@ -4,7 +4,7 @@ export interface PropType {
   marginTopBtm?: boolean
 }
 
-
+// Landing Page Interfaces start
 export interface IHeaderProps {
   roundedHeaderButton?: boolean,
   logoLink?: React.ReactComponentElement<any>,
@@ -13,12 +13,43 @@ export interface IHeaderProps {
   collapseBreakpointClass?: string
 }
 
-export interface IHomeFeatureProps{
-  cards: string[],
-  heading: string,
-  subheading : string,
-  description : string,
+export interface IHome_FeatureProps{
+  cards?: string[],
+  heading?: string,
+  subheading ?: string,
+  description ?: string,
 }
+
+export interface IHome_QualityWork_ImageProps{
+  imageRounded?: boolean,
+  imageBorder?: boolean,
+  imageShadow?: boolean,
+}
+
+export interface IHome_QualityWork_TextColumnProps{
+  textOnLeft?: boolean,
+}
+export interface IHome_QualityWork_PrimaryButtonProps{
+  buttonRounded?: boolean,
+}
+
+export interface IHome_QualityWorkProps{
+    subheading?: any,
+    heading?: any,
+    description?: string,
+    primaryButtonText?: string,
+    primaryButtonUrl?: string,
+    imageSrc?: string,
+    buttonRounded?: boolean,
+    imageRounded?: boolean,
+    imageBorder?: boolean,
+    imageShadow?: boolean,
+    imageCss?: any,
+    textOnLeft?: boolean,
+}
+
+// Landing Page Interfaces end
+
 export interface IFormValue {
   username?: string
   email?: string
