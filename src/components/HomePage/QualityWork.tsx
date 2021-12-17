@@ -53,7 +53,7 @@ const PrimaryButton = styled(PrimaryButtonBase)(
   ]
 );
 
-const QualityWork = ({
+const QualityWork: React.FC<IHome_QualityWorkProps> = ({
   subheading = "Our Expertise",
   heading = (
     <>
@@ -70,7 +70,7 @@ const QualityWork = ({
   imageShadow = false,
   imageCss = null,
   textOnLeft = true,
-}: IHome_QualityWorkProps) => {
+}) => {
   // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
 
   return (

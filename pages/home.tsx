@@ -7,8 +7,8 @@ import tw from "twin.macro";
 import Hero from "../src/components/HomePage/Hero";
 import Features from "../src/components/HomePage/Features";
 import QualityWork from "../src/components/HomePage/QualityWork";
+import FeatureWithSteps from "../src/components/HomePage/FeatureWithSteps";
 // import Values from "../src/components/HomePage/Values";
-// import FeatureWithSteps from "../src/components/HomePage/FeatureWithSteps";
 // import Pricing from "../src/components/HomePage/Pricing";
 // import Testimonial from "../src/components/HomePage/Testimonial";
 // import FAQ from "../src/components/HomePage/FAQ";
@@ -19,7 +19,7 @@ import QualityWork from "../src/components/HomePage/QualityWork";
 // import { FiBriefcase } from "react-icons/fi";
 // import { FiDollarSign } from "react-icons/fi";
 
-const Home = () => {
+const Home: React.FC = () => {
   const Subheading = tw.span`uppercase tracking-widest font-bold text-primary-500`;
   const HighlightedText = tw.span`text-primary-500`;
   const StyledDiv = tw.div`min-h-screen text-secondary-500 p-8 overflow-hidden`;
@@ -44,19 +44,17 @@ const Home = () => {
           imageSrc={"/assets/images/hero-screenshot-1.png"}
           imageBorder={true}
         />
+        <FeatureWithSteps
+          subheading={<Subheading>STEPS</Subheading>}
+          heading={
+            <>
+              Easy to <HighlightedText>Get Started.</HighlightedText>
+            </>
+          }
+          textOnLeft={false}
+          imageSrc={"/assets/images/hero-screenshot-2.png"}
+        />
         {/* 
-      <FeatureWithSteps
-        subheading={<Subheading>STEPS</Subheading>}
-        heading={
-          <>
-            Easy to <HighlightedText>Get Started.</HighlightedText>
-          </>
-        }
-        textOnLeft={false}
-        imageSrc={"/assets/images/hero-screenshot-2.png"}
-        imageDecoratorBlob={true}
-        decoratorBlobCss={tw`xl:w-40 xl:h-40 opacity-20 -translate-x-1/2 left-1/2`}
-      />
       <Values
         subheading={<Subheading>VALUES</Subheading>}
         heading={
