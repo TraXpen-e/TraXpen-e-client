@@ -38,7 +38,7 @@ const DecoratorBlob1Container = styled.div`
   }
 `;
 
-const Hero = ({ roundedHeaderButton }: IHeaderProps) => {
+const Hero: React.FC<IHeaderProps> = ({ roundedHeaderButton }) => {
   return (
     <>
       <Navbar roundedHeaderButton={roundedHeaderButton} />
