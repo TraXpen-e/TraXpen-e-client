@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface PropType {
   color?: string
   center?: boolean
@@ -46,6 +48,32 @@ export interface IHome_QualityWorkProps{
     imageShadow?: boolean,
     imageCss?: any,
     textOnLeft?: boolean,
+}
+
+
+export interface IHome_FeatureWithSteps_MacImageProps{
+  imageRounded?: boolean,
+  imageBorder?: boolean,
+  imageShadow?: boolean,
+}
+
+export interface IHome_FeatureWithSteps_TextColumnProps{
+  textOnLeft?: boolean,
+}
+
+
+export interface IHome_FeatureWithStepsProps{
+  subheading?: any,
+  heading?: any,
+  imageSrc?: string,
+  imageRounded?: boolean,
+  imageBorder?: boolean,
+  imageShadow?: boolean,
+  textOnLeft?: boolean,
+  steps?: {
+    heading?: string,
+    description?: string,
+  }[],
 }
 
 // Landing Page Interfaces end
