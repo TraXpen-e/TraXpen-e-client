@@ -6,7 +6,7 @@ import "styled-components/macro";
 import Image from "next/image";
 
 import Navbar from "./Navbar";
-import { IHeaderProps } from "../../interfaces";
+import { IHeaderProps } from "@interfaces";
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col lg:flex-row lg:items-center max-w-screen-xl mx-auto py-20 md:py-24`;

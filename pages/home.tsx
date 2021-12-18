@@ -8,16 +8,14 @@ import Hero from "../src/components/HomePage/Hero";
 import Features from "../src/components/HomePage/Features";
 import QualityWork from "../src/components/HomePage/QualityWork";
 import FeatureWithSteps from "../src/components/HomePage/FeatureWithSteps";
-// import Values from "../src/components/HomePage/Values";
+import Values from "../src/components/HomePage/Values";
 // import Pricing from "../src/components/HomePage/Pricing";
 // import Testimonial from "../src/components/HomePage/Testimonial";
 // import FAQ from "../src/components/HomePage/FAQ";
 // import GetStarted from "../src/components/HomePage/GetStarted";
 // import Footer from "../src/components/HomePage/Footer";
 
-// import prototypeIllustrationImageSrc from "../src/Assets/Images/prototype-illustration.svg";
-// import { FiBriefcase } from "react-icons/fi";
-// import { FiDollarSign } from "react-icons/fi";
+import { FiDollarSign, FiBriefcase } from "react-icons/fi";
 
 const Home: React.FC = () => {
   const Subheading = tw.span`uppercase tracking-widest font-bold text-primary-500`;
@@ -54,34 +52,33 @@ const Home: React.FC = () => {
           textOnLeft={false}
           imageSrc={"/assets/images/hero-screenshot-2.png"}
         />
+        <Values
+          subheading={<Subheading>VALUES</Subheading>}
+          heading={
+            <>
+              We Always Abide by Our{" "}
+              <HighlightedText>Principles.</HighlightedText>
+            </>
+          }
+          imageSrc={"/assets/images/planning-illustration.svg"}
+          features={[
+            {
+              Icon: FiDollarSign,
+              title: "Affordable",
+              description:
+                "We promise to offer you the best rate we can - at par with the industry standard.",
+              iconContainerCss: tw`bg-green-300 text-green-800`,
+            },
+            {
+              Icon: FiBriefcase,
+              title: "Professionalism",
+              description:
+                "We have the best services for you. We are always ready to help you with tracking your expenses.",
+              iconContainerCss: tw`bg-black text-white`,
+            },
+          ]}
+        />
         {/* 
-      <Values
-        subheading={<Subheading>VALUES</Subheading>}
-        heading={
-          <>
-            We Always Abide by Our{" "}
-            <HighlightedText>Principles.</HighlightedText>
-          </>
-        }
-        imageSrc={prototypeIllustrationImageSrc}
-        showDecoratorBlob={false}
-        features={[
-          {
-            Icon: FiDollarSign,
-            title: "Affordable",
-            description:
-              "We promise to offer you the best rate we can - at par with the industry standard.",
-            iconContainerCss: tw`bg-green-300 text-green-800`,
-          },
-          {
-            Icon: FiBriefcase,
-            title: "Professionalism",
-            description:
-              "We assure you that our templates are designed and created by professional designers.",
-            iconContainerCss: tw`bg-red-300 text-red-800`,
-          },
-        ]}
-      />
       <Pricing
         subheading={<Subheading>Pricing</Subheading>}
         heading={

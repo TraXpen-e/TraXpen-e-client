@@ -6,7 +6,7 @@ import {
   SectionHeading,
   Subheading as SubheadingBase,
   PrimaryButton as PrimaryButtonBase,
-} from "../../../styles/style";
+} from "@styles/style";
 
 import Image from "next/image";
 
@@ -71,8 +71,6 @@ const QualityWork: React.FC<IHome_QualityWorkProps> = ({
   imageCss = null,
   textOnLeft = true,
 }) => {
-  // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
-
   return (
     <Container>
       <TwoColumn>

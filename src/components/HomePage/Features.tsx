@@ -10,7 +10,7 @@ import {
   Subheading as SubheadingBase,
   SectionDescription,
 } from "@styles/style";
-import { IHome_FeatureProps } from "@interfaces/";
+import { IHome_FeatureProps } from "@interfaces";
 
 const Container = tw.div`relative`;
 
@@ -55,7 +55,7 @@ const DecoratorBlobContainer = styled.div`
 `;
 
 const Features: React.FC<IHome_FeatureProps> = ({
-  cards = null,
+  cards = [],
   heading = "Amazing Features",
   subheading = "Features",
   description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -82,7 +82,7 @@ const Features: React.FC<IHome_FeatureProps> = ({
     { imageSrc: "/assets/images/simple-icon.svg", title: "Easy" },
   ];
 
-  if (!cards) cards = defaultCards;
+  if (!cards.length || !cards) cards = defaultCards;
 
   return (
     <Container>
