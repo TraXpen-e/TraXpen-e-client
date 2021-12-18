@@ -2,10 +2,7 @@ import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import "styled-components/macro";
-import {
-  SectionHeading,
-  Subheading as SubheadingBase,
-} from "../../../styles/style";
+import { SectionHeading, Subheading as SubheadingBase } from "@styles/style";
 import Image from "next/image";
 
 import {
