@@ -76,6 +76,49 @@ export interface IHome_FeatureWithStepsProps{
   }[],
 }
 
+export interface IHome_Values_ImageContainerProps{
+  imageRounded?: boolean,
+  imageBorder?: boolean,
+  imageShadow?: boolean,
+}
+
+export interface IHome_Values_TextColumnProps{
+  textOnLeft?: boolean,
+}
+
+export interface IHome_Values_FeatureIconContainerProps{
+  iconRoundedFull?: boolean,
+  iconFilled?: boolean,
+}
+
+export interface IHome_Values_PrimaryButtonProps{
+  buttonRounded?: boolean,
+}
+
+
+export interface IHome_ValuesProps{
+  subheading?: any,
+  heading?: any,
+  description?: string,
+  primaryButtonText?: string,
+  primaryButtonUrl?: string,
+  imageSrc?: string,
+  buttonRounded?: boolean,
+  imageRounded?: boolean,
+  imageBorder?: boolean,
+  imageShadow?: boolean,
+  textOnLeft?: boolean,
+  features?: {
+    Icon?: any,
+    title?: string,
+    description?: string,
+    iconContainerCss?: any,
+  }[],
+  iconRoundedFull?: boolean,
+  iconFilled?: boolean,
+  iconContainerCss?: any,
+}
+
 // Landing Page Interfaces end
 
 export interface IFormValue {
