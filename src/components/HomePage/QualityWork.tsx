@@ -6,7 +6,7 @@ import {
   SectionHeading,
   Subheading as SubheadingBase,
   PrimaryButton as PrimaryButtonBase,
-} from "../../../styles/style";
+} from "@styles/style";
 
 import Image from "next/image";
 
