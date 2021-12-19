@@ -1,6 +1,5 @@
 import React from "react";
 import Head from "next/head";
-import { useRouter } from "next/router";
 
 import tw from "twin.macro";
 
@@ -9,7 +8,7 @@ import Features from "../src/components/HomePage/Features";
 import QualityWork from "../src/components/HomePage/QualityWork";
 import FeatureWithSteps from "../src/components/HomePage/FeatureWithSteps";
 import Values from "../src/components/HomePage/Values";
-// import Pricing from "../src/components/HomePage/Pricing";
+import Pricing from "../src/components/HomePage/Pricing";
 // import Testimonial from "../src/components/HomePage/Testimonial";
 // import FAQ from "../src/components/HomePage/FAQ";
 // import GetStarted from "../src/components/HomePage/GetStarted";
@@ -78,54 +77,57 @@ const Home: React.FC = () => {
             },
           ]}
         />
+        <Pricing
+          subheading={<Subheading>Pricing</Subheading>}
+          heading={
+            <>
+              Reasonable & Flexible <HighlightedText>Plans.</HighlightedText>
+            </>
+          }
+          plans={[
+            {
+              name: "Starter",
+              price: "Free",
+              duration: "Unlimited",
+              mainFeature: "For Individuals",
+              features: [
+                "200 Transactions per Month",
+                "1 Device per User",
+                "1 User",
+                "1 Client Connections",
+                "Unlimited Storage",
+              ],
+            },
+            {
+              name: "Personal",
+              price: "$9.99",
+              duration: "Monthly",
+              mainFeature: "For Individuals",
+              features: [
+                "200 Transactions per Month",
+                "5 Device per User",
+                "5 Users",
+                "10 Client Connections",
+                "Unlimited Storage",
+              ],
+            },
+            {
+              name: "Business",
+              price: "$19.99",
+              duration: "Monthly",
+              mainFeature: "For Small Businesses",
+              features: [
+                "Unlimited Transactions",
+                "Unlimited Device per User",
+                "Unlimited Users",
+                "Unlimited Client Connections",
+                "Unlimited Storage",
+              ],
+              featured: true,
+            },
+          ]}
+        />
         {/* 
-      <Pricing
-        subheading={<Subheading>Pricing</Subheading>}
-        heading={
-          <>
-            Reasonable & Flexible <HighlightedText>Plans.</HighlightedText>
-          </>
-        }
-        plans={[
-          {
-            name: "Personal",
-            price: "$17.99",
-            duration: "Monthly",
-            mainFeature: "For Individuals",
-            features: [
-              "30 Templates",
-              "7 Landing Pages",
-              "12 Internal Pages",
-              "Basic Assistance",
-            ],
-          },
-          {
-            name: "Business",
-            price: "$37.99",
-            duration: "Monthly",
-            mainFeature: "For Small Businesses",
-            features: [
-              "60 Templates",
-              "15 Landing Pages",
-              "22 Internal Pages",
-              "Priority Assistance",
-            ],
-            featured: true,
-          },
-          {
-            name: "Enterprise",
-            price: "$57.99",
-            duration: "Monthly",
-            mainFeature: "For Large Companies",
-            features: [
-              "90 Templates",
-              "27 Landing Pages",
-              "37 Internal Pages",
-              "Personal Assistance",
-            ],
-          },
-        ]}
-      />
       <Testimonial
         subheading={<Subheading>Testimonials</Subheading>}
         heading={
