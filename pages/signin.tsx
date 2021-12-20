@@ -1,7 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-
 import { FaFacebook, FaGoogle, FaApple } from 'react-icons/fa'
 
 import tw from 'twin.macro'
