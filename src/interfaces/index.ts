@@ -121,6 +121,24 @@ export interface IHome_ValuesProps {
   iconContainerCss?: any;
 }
 
+export interface IHome_Pricing_PlanProps {
+  featured?: boolean;
+}
+
+export interface IHome_PricingProps {
+  subheading?: any;
+  heading?: any;
+  description?: string;
+  plans?: {
+    name?: string;
+    price?: string;
+    duration?: string;
+    mainFeature?: string;
+    features?: string[];
+    featured?: boolean;
+  }[];
+  primaryButtonText?: string;
+}
 // Landing Page Interfaces end
 
 export interface IFormValue {
