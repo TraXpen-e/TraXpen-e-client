@@ -12,8 +12,8 @@ export function usePostRequest() {
       const response = await Axios.post(url, body, options)
       setData(response.data)
       setLoading(false)
-    } catch (error) {
-      setError(error)
+    } catch (error: any) {
+      setError(error?.response ? error?.response.data.error : error)
       setLoading(false)
     }
   }
